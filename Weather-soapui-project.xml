@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="463cda01-cd7a-4dd6-a147-b0e038c4a53f" activeEnvironment="Default environment" name="Weather" resourceRoot="" soapui-version="6.0.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="9c0d9b30-edda-4341-b34c-8f047456ef0d" wsaVersion="NONE" name="GlobalWeatherSoap" type="wsdl" bindingName="{http://www.webserviceX.NET}GlobalWeatherSoap" soapVersion="1_1" anonymous="optional" definition="http://www.webservicex.net/globalweather.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://www.webservicex.net/globalweather.asmx</con:endpoint></con:endpoints><con:operation id="b58133e1-c9c7-41af-a35a-211837d9123a" isOneWay="false" action="http://www.webserviceX.NET/GetCitiesByCountry" name="GetCitiesByCountry" bindingOperationName="GetCitiesByCountry" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="64dd2d32-50c6-42f0-aa22-d6e12313c0a8" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/globalweather.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetCitiesByCountry>
+         <!--Optional:-->
+         <web:CountryName>Bulgaria</web:CountryName>
+      </web:GetCitiesByCountry>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/GetCitiesByCountry"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c3dc03f9-dd81-4bcd-b5a7-5298b3603e95" isOneWay="false" action="http://www.webserviceX.NET/GetWeather" name="GetWeather" bindingOperationName="GetWeather" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7d4b730e-b1a7-46b4-a033-ad6ccde56f05" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/globalweather.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetWeather>
+         <!--Optional:-->
+         <web:CityName>Plovdiv</web:CityName>
+         <!--Optional:-->
+         <web:CountryName>Bulgaria</web:CountryName>
+      </web:GetWeather>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/GetWeather"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="e4859b46-d93d-4277-bda8-b64e20db2de9" wsaVersion="NONE" name="GlobalWeatherSoap12" type="wsdl" bindingName="{http://www.webserviceX.NET}GlobalWeatherSoap12" soapVersion="1_2" anonymous="optional" definition="http://www.webservicex.net/globalweather.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://www.webservicex.net/globalweather.asmx?WSDL"><con:part><con:url>http://www.webservicex.net/globalweather.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.webserviceX.NET" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.webserviceX.NET" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.webserviceX.NET">
+      <s:element name="GetWeather">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CityName" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="CountryName" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeatherResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWeatherResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCitiesByCountry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CountryName" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCitiesByCountryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCitiesByCountryResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string"/>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetWeatherSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWeather"/>
+  </wsdl:message>
+  <wsdl:message name="GetWeatherSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWeatherResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetCitiesByCountrySoapIn">
+    <wsdl:part name="parameters" element="tns:GetCitiesByCountry"/>
+  </wsdl:message>
+  <wsdl:message name="GetCitiesByCountrySoapOut">
+    <wsdl:part name="parameters" element="tns:GetCitiesByCountryResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetWeatherHttpGetIn">
+    <wsdl:part name="CityName" type="s:string"/>
+    <wsdl:part name="CountryName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetWeatherHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetCitiesByCountryHttpGetIn">
+    <wsdl:part name="CountryName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetCitiesByCountryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetWeatherHttpPostIn">
+    <wsdl:part name="CityName" type="s:string"/>
+    <wsdl:part name="CountryName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetWeatherHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetCitiesByCountryHttpPostIn">
+    <wsdl:part name="CountryName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetCitiesByCountryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:portType name="GlobalWeatherSoap">
+    <wsdl:operation name="GetWeather">
+      <wsdl:documentation>Get weather report for all major cities around the world.</wsdl:documentation>
+      <wsdl:input message="tns:GetWeatherSoapIn"/>
+      <wsdl:output message="tns:GetWeatherSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesByCountry">
+      <wsdl:documentation>Get all major cities by country name(full / part).</wsdl:documentation>
+      <wsdl:input message="tns:GetCitiesByCountrySoapIn"/>
+      <wsdl:output message="tns:GetCitiesByCountrySoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="GlobalWeatherHttpGet">
+    <wsdl:operation name="GetWeather">
+      <wsdl:documentation>Get weather report for all major cities around the world.</wsdl:documentation>
+      <wsdl:input message="tns:GetWeatherHttpGetIn"/>
+      <wsdl:output message="tns:GetWeatherHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesByCountry">
+      <wsdl:documentation>Get all major cities by country name(full / part).</wsdl:documentation>
+      <wsdl:input message="tns:GetCitiesByCountryHttpGetIn"/>
+      <wsdl:output message="tns:GetCitiesByCountryHttpGetOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="GlobalWeatherHttpPost">
+    <wsdl:operation name="GetWeather">
+      <wsdl:documentation>Get weather report for all major cities around the world.</wsdl:documentation>
+      <wsdl:input message="tns:GetWeatherHttpPostIn"/>
+      <wsdl:output message="tns:GetWeatherHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesByCountry">
+      <wsdl:documentation>Get all major cities by country name(full / part).</wsdl:documentation>
+      <wsdl:input message="tns:GetCitiesByCountryHttpPostIn"/>
+      <wsdl:output message="tns:GetCitiesByCountryHttpPostOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GlobalWeatherSoap" type="tns:GlobalWeatherSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetWeather">
+      <soap:operation soapAction="http://www.webserviceX.NET/GetWeather" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesByCountry">
+      <soap:operation soapAction="http://www.webserviceX.NET/GetCitiesByCountry" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GlobalWeatherSoap12" type="tns:GlobalWeatherSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetWeather">
+      <soap12:operation soapAction="http://www.webserviceX.NET/GetWeather" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesByCountry">
+      <soap12:operation soapAction="http://www.webserviceX.NET/GetCitiesByCountry" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GlobalWeatherHttpGet" type="tns:GlobalWeatherHttpGet">
+    <http:binding verb="GET"/>
+    <wsdl:operation name="GetWeather">
+      <http:operation location="/GetWeather"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesByCountry">
+      <http:operation location="/GetCitiesByCountry"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GlobalWeatherHttpPost" type="tns:GlobalWeatherHttpPost">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="GetWeather">
+      <http:operation location="/GetWeather"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesByCountry">
+      <http:operation location="/GetCitiesByCountry"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GlobalWeather">
+    <wsdl:port name="GlobalWeatherSoap" binding="tns:GlobalWeatherSoap">
+      <soap:address location="http://www.webservicex.net/globalweather.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="GlobalWeatherSoap12" binding="tns:GlobalWeatherSoap12">
+      <soap12:address location="http://www.webservicex.net/globalweather.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="GlobalWeatherHttpGet" binding="tns:GlobalWeatherHttpGet">
+      <http:address location="http://www.webservicex.net/globalweather.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="GlobalWeatherHttpPost" binding="tns:GlobalWeatherHttpPost">
+      <http:address location="http://www.webservicex.net/globalweather.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.webservicex.net/globalweather.asmx</con:endpoint></con:endpoints><con:operation id="109b7124-f1b6-4c1c-828e-07cd110180fd" isOneWay="false" action="http://www.webserviceX.NET/GetCitiesByCountry" name="GetCitiesByCountry" bindingOperationName="GetCitiesByCountry" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="149e9db3-a20e-43c6-a2d7-536c5546a5ba" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/globalweather.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetCitiesByCountry>
+         <!--Optional:-->
+         <web:CountryName>Ukraine</web:CountryName>
+      </web:GetCitiesByCountry>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/GlobalWeatherSoap/GetCitiesByCountryRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="47eedce0-4d37-42f8-a51c-2af323813a8e" isOneWay="false" action="http://www.webserviceX.NET/GetWeather" name="GetWeather" bindingOperationName="GetWeather" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="45a2e50c-9739-4521-aaac-df0be3c5b05a" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/globalweather.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetWeather>
+         <!--Optional:-->
+         <web:CityName>Kyiv</web:CityName>
+         <!--Optional:-->
+         <web:CountryName>Ukraine</web:CountryName>
+      </web:GetWeather>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/GlobalWeatherSoap/GetWeatherRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="95f49cfa-97a8-479b-a7db-bf06bcb1721f" name="GlobalWeatherSoap TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="cc2e452e-b984-4bc3-b67c-1d8b5f7b1042" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GlobalWeatherSoap TestCase" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="request" id="2207e6f5-683c-48fc-89ec-1b90116d935e" name="GetCitiesByCountry"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GlobalWeatherSoap</con:interface><con:operation>GetCitiesByCountry</con:operation><con:request name="GetCitiesByCountry" id="55e51819-707f-4888-9a4f-47554f821d43"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/globalweather.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetCitiesByCountry>
+         <!--Optional:-->
+         <web:CountryName>Bulgaria</web:CountryName>
+      </web:GetCitiesByCountry>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="GroovyScriptAssertion" id="1c1cd5ae-217e-4db4-af7c-c369af39e7e0" name="Assert node [GetCitiesByCountryResult]"><con:configuration><scriptText>import com.eviware.soapui.support.XmlHolder
+
+def holder = new XmlHolder( messageExchange.responseContentAsXml )
+holder.namespaces["ns1"] = "http://www.webserviceX.NET"
+def node = holder.getDomNode( "//ns1:GetCitiesByCountryResponse[1]/ns1:GetCitiesByCountryResult[1]" )
+
+assert node != null
+</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="8bad4309-857d-43c5-9508-75b9df6f5d45" name="Script Assertion"><con:configuration><scriptText>def searchData = { data, element ->
+   def parsedData = new XmlSlurper().parseText(data)
+   parsedData.'**'.find {it.name() == element} as String
+}
+
+//Closure to check the xpath
+def searchByXpath = {data, xpath ->
+   def holder = new com.eviware.soapui.support.XmlHolder(data)
+   def xpathResult = holder.getNodeValue(xpath)
+   log.info "Xpath result : ${xpathResult}"
+   xpathResult
+}
+
+//check if the response is non empty
+assert context.response, "Response is empty or null"
+
+//Gets the CDATA part of the response
+def cdata = searchData(context.response, 'GetCitiesByCountryResult')
+
+//Gets the xpath result
+def countryName = 'Bulgaria'
+def result = (searchByXpath(cdata, "//Table/Country[. = '$countryName']/text()") == countryName) ? true : false 
+log.info "Is city ${countryName} exist in the table: ${result}" 
+
+//Check the xpath result is true(i.e., given city name exists in the table)
+assert result, "${countryName} does not exist in the result table"
+/**
+* Demonstration of negative assertion
+* Given city should not exists
+**/
+def countryName1 = 'Ukraine'
+def result1 = (searchByXpath(cdata, "//Table/Country[. = '$countryName1']/text()") == countryName1) ? true : false
+log.info "Is city ${countryName1} exist in the table: ${result1}" 
+
+//Check the xpath result is false (i.e., given city name does not exist in the table)
+assert !result1, "${countryName1} exists in the result table"</scriptText></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://www.webserviceX.NET/GetCitiesByCountry" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="a6ef3bb7-63b2-40f9-b050-9923cb94efa2" name="GetWeather"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GlobalWeatherSoap</con:interface><con:operation>GetWeather</con:operation><con:request name="GetWeather" id="99a1d05e-486c-4114-bb5e-0afac530a229"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/globalweather.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetWeather>
+         <!--Optional:-->
+         <web:CityName>Plovdiv</web:CityName>
+         <!--Optional:-->
+         <web:CountryName>Bulgaria</web:CountryName>
+      </web:GetWeather>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="XPath Match" id="6bdd7a06-46bb-4004-b784-b280833b7eae" name="Match content of [GetWeatherResult]"><con:configuration><path>declare namespace ns1='http://www.webserviceX.NET';
+//ns1:GetWeatherResponse[1]/ns1:GetWeatherResult[1]/text()</path><content>Plovdiv</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="c34c4d51-1848-44a1-b505-9707cc136690" name="Match content of [GetWeatherResult]"><con:configuration><path>declare namespace ns1='http://www.webserviceX.NET';
+//ns1:GetWeatherResponse[1]/ns1:GetWeatherResult[1]/text()</path><content>Data Not Found</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="5ec2130c-7641-4683-bad3-c0a4f08d5171" name="Assert node [GetWeatherResult]"><con:configuration><scriptText>import com.eviware.soapui.support.XmlHolder
+
+def holder = new XmlHolder( messageExchange.responseContentAsXml )
+holder.namespaces["ns1"] = "http://www.webserviceX.NET"
+def node = holder.getDomNode( "//ns1:GetWeatherResponse[1]/ns1:GetWeatherResult[1]" )
+
+assert node != null
+</scriptText></con:configuration></con:assertion><con:assertion type="XPath Match" id="05ccfc1b-1f2e-4b81-9265-0475ff33fe71" name="Check count of [GetWeatherResult]"><con:configuration><path>declare namespace ns1='http://www.webserviceX.NET';
+count( //ns1:GetWeatherResponse/ns1:GetWeatherResult)</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="b2ba6e05-7388-442c-b5d2-e55b1581b45d" name="Response SLA"><con:configuration><SLA>600</SLA></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://www.webserviceX.NET/GetWeather" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>2207e6f5-683c-48fc-89ec-1b90116d935e</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>a6ef3bb7-63b2-40f9-b050-9923cb94efa2</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:testSuite id="030f943f-e2db-40ef-8561-12deed4d0e65" name="GlobalWeatherSoap12 TestSuite"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType><con:testCase id="29a568b9-f669-40e4-b9fb-f7c4611c3278" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GlobalWeatherSoap12 TestCase" searchProperties="true" timeout="0"><con:settings/><con:testStep type="request" id="5eb1c208-2545-4fe0-a639-e7614e5ee881" name="GetCitiesByCountry"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GlobalWeatherSoap12</con:interface><con:operation>GetCitiesByCountry</con:operation><con:request name="GetCitiesByCountry" id="80e202e0-6ad2-4f12-85c1-ee2cba7709b9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/globalweather.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetCitiesByCountry>
+         <!--Optional:-->
+         <web:CountryName>Ukraine</web:CountryName>
+      </web:GetCitiesByCountry>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://www.webserviceX.NET/GlobalWeatherSoap/GetCitiesByCountryRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="da0e53dc-4a62-4588-be2f-163976c71ff8" name="GetWeather"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GlobalWeatherSoap12</con:interface><con:operation>GetWeather</con:operation><con:request name="GetWeather" id="44cc4ff5-db3c-410e-9b48-c41359be15b7"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/globalweather.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetWeather>
+         <!--Optional:-->
+         <web:CityName>Kyiv</web:CityName>
+         <!--Optional:-->
+         <web:CountryName>Ukraine</web:CountryName>
+      </web:GetWeather>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion type="XPath Match" id="bb0abef4-5d07-4794-90be-942529886cc7" name="Match content of [GetWeatherResult]"><con:configuration><path>declare namespace ns1='http://www.webserviceX.NET';
+//ns1:GetWeatherResponse[1]/ns1:GetWeatherResult[1]/text()</path><content>Kyiv</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="c2e489e3-1243-4af3-b212-1e4e564046cc" name="Match content of [GetWeatherResult]"><con:configuration><path>declare namespace ns1='http://www.webserviceX.NET';
+//ns1:GetWeatherResponse[1]/ns1:GetWeatherResult[1]/text()</path><content>Data Not Found</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="8a2865ad-8c82-4cef-9d1e-c1726c6afad7" name="Assert node [GetWeatherResult]"><con:configuration><scriptText>import com.eviware.soapui.support.XmlHolder
+
+def holder = new XmlHolder( messageExchange.responseContentAsXml )
+holder.namespaces["ns1"] = "http://www.webserviceX.NET"
+def node = holder.getDomNode( "//ns1:GetWeatherResponse[1]/ns1:GetWeatherResult[1]" )
+
+assert node != null
+</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="d9b69066-a000-4325-8524-7aba585621f5" name="Assert node [GetWeatherResult]"><con:configuration><scriptText>import com.eviware.soapui.support.XmlHolder
+
+def holder = new XmlHolder( messageExchange.responseContentAsXml )
+holder.namespaces["ns1"] = "http://www.webserviceX.NET"
+def node = holder.getDomNode( "//ns1:GetWeatherResponse[1]/ns1:GetWeatherResult[1]" )
+
+assert node != null
+</scriptText></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="9252bce5-a97e-484d-bcb1-84590e4327a7" name="Response SLA"><con:configuration><SLA>500</SLA></con:configuration></con:assertion><con:assertion type="XPath Match" id="f942db11-095e-4a1e-af91-3be2a788b58f" name="Check count of [GetWeatherResult]"><con:configuration><path>declare namespace ns1='http://www.webserviceX.NET';
+count( //ns1:GetWeatherResponse/ns1:GetWeatherResult)</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://www.webserviceX.NET/GlobalWeatherSoap/GetWeatherRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:savedRecentRuns>1</con:savedRecentRuns><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:xmlTemplates/><con:parameters/><con:parameters/></con:reporting><con:reporting/><con:authRepository/><con:tags/></con:soapui-project>
